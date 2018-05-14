@@ -7,17 +7,21 @@ import { MovieService } from './movie.service';
 
 
 import { AppComponent } from './app.component';
+import { MovieTitlesComponent } from './movie-titles/movie-titles.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MovieTitlesComponent
   ],
   imports: [
     BrowserModule, 
     ClarityModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ MovieService ],
   bootstrap: [AppComponent]
