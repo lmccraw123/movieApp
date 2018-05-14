@@ -10,5 +10,9 @@ export class MovieService {
 
 
   constructor(private http: HttpClient) { }
+  
+    getData (){
+    this.http.get(this.url)
+  }
 
 }
