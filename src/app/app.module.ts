@@ -4,8 +4,6 @@ import { ClarityModule } from "@clr/angular"
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MovieService } from './movie.service';
-
-
 import { AppComponent } from './app.component';
 import { MovieTitlesComponent } from './movie-titles/movie-titles.component';
 import { AppRoutingModule } from './/app-routing.module';

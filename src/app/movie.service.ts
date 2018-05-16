@@ -6,13 +6,18 @@ import { Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class MovieService {
-    url: string = "https://api.themoviedb.org/3/movie/550?api_key=02b6e7af54cece5c840e0819a264f3a5"
-
+    apiKey: string = "02b6e7af54cece5c840e0819a264f3a5"
+    baseURL: string = 'https://api.themoviedb.org/3/movie/550?'
+    movie: string = 'movie='
+    movieTitlesArr: any[] = [];
 
   constructor(private http: HttpClient) { }
   
     getData (){
-    this.http.get(this.url)
+  }
+  
+    submitMovieTitle(title){
+    this.movieTitlesArr.push(title)
   }
 
 }

@@ -1,3 +1,11 @@
 <p>
-  movie-titles works!
-</p>
+    movie-titles works!
+    < /p>
+
+        <input [(ngModel)]="movieTitles" #input>
+        <button (click)="onAddTitle(input.value)"> Submit Movie Title  </button>
+
+        <ul>
+            <li *ngFor="let movieTitle of serviceArr">MOVIETITLE: {{movieTitle}}
+            </li>
+        </ul>
