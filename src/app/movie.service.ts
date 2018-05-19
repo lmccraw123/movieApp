@@ -1,23 +1,30 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClient } from '@angular/common/http';
 import { Observable} from 'rxjs/Observable';
 
 
 @Injectable()
 export class MovieService {
-    apiKey: string = "02b6e7af54cece5c840e0819a264f3a5"
-    baseURL: string = 'https://api.themoviedb.org/3/movie/550?'
-    movie: string = 'movie='
-    movieTitlesArr: any[] = [];
+    //fullUrl = https://api.themoviedb.org/3/search/movie?api_key=098dc649f81bdf649cd8443c51528d2d&language=en-US&query=%22Rush%20Hour%22&page=1&include_adult=false;
+    apiKey: string = '02b6e7af54cece5c840e0819a264f3a5'
+    baseUrl: string = 'https://api.themoviedb.org/3/'
+    moviePage = "search/movie?api_key="
+    movie: string = ''
+    movieTitlesArr: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private _http: HttpClient) { }
   
-    getData (){
-  }
   
     submitMovieTitle(title){
     this.movieTitlesArr.push(title)
   }
+    
+    movieInformation(){
+        console.log('move api url', this.baseUrl+this.moviePage+this.apiKey)
+        return this._http.get(this.baseUrl+this.moviePage+this.apiKey+'&query='+this.movie);
+    }
+// getMovieInformation(){
+//   return this._http.get(this.baseUrl+this.apiKey+this.movie+this.moviePage)
+//  }   
 
 }

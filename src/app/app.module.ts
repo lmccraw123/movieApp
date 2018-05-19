@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { MovieTitlesComponent } from './movie-titles/movie-titles.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { routes } from './app-routing.module';
+import { NavigationComponent } from './navigation/navigation.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, MovieTitlesComponent
+    AppComponent, MovieTitlesComponent, NavigationComponent, HomeComponent
   ],
   imports: [
     BrowserModule, 
@@ -20,7 +22,7 @@ import { routes } from './app-routing.module';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    routes,
+    routes
   ],
   providers: [ MovieService ],
   bootstrap: [AppComponent]

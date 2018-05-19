@@ -1,11 +1,18 @@
 <p>
     movie-titles works!
-    < /p>
+</p>
 
-        <input [(ngModel)]="movieTitles" #input>
-        <button (click)="onAddTitle(input.value)"> Submit Movie Title  </button>
+<input [(ngModel)]="_movieTitles.movie" #input>
+<button (click)="movieEntry()" class="btn btn-link">enter</button>
 
-        <ul>
-            <li *ngFor="let movieTitle of serviceArr">MOVIETITLE: {{movieTitle}}
-            </li>
-        </ul>
+
+<ul>
+    <li *ngFor="let movieTitle of serviceArr">Movie Name: {{movieTitle}}
+    </li>
+</ul>
+
+<section class="card">
+    <ul>
+        Movie Title: {{title}} <br> Overview: {{overview}} <br> Rating: {{vote_average}} <br> Release Date: {{release_date}}
+    </ul>
+</section>
