@@ -10,11 +10,13 @@ import { AppRoutingModule } from './/app-routing.module';
 import { routes } from './app-routing.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, MovieTitlesComponent, NavigationComponent, HomeComponent
+    AppComponent, MovieTitlesComponent, NavigationComponent, HomeComponent, LoginComponent, RegisterComponent
   ],
   imports: [
     BrowserModule, 
