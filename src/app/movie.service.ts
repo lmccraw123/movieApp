@@ -23,8 +23,5 @@ export class MovieService {
         console.log('move api url', this.baseUrl+this.moviePage+this.apiKey)
         return this._http.get(this.baseUrl+this.moviePage+this.apiKey+'&query='+this.movie);
     }
-// getMovieInformation(){
-//   return this._http.get(this.baseUrl+this.apiKey+this.movie+this.moviePage)
-//  }   
 
 }

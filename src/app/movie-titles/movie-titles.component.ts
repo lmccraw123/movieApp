@@ -13,14 +13,13 @@ export class MovieTitlesComponent implements OnInit {
  title: string = "";
  vote_average: any;
  release_date: any;
+ data:any;
 
-    constructor(private _movieTitles: MovieService ) { 
-    
-  }
+    constructor(private _movieTitles: MovieService ) {
+      
+    }
 
-  ngOnInit() {
-  }
-  
+  ngOnInit() {}
   
   movieEntry(){
     this._movieTitles.movieInformation().subscribe( data=>{
@@ -37,7 +36,5 @@ export class MovieTitlesComponent implements OnInit {
       this._movieTitles.submitMovieTitle(title)
       this.movieTitles = "";
     }
-
 }
-
 }

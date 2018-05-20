@@ -1,10 +1,5 @@
-<p>
-    movie-titles works!
-</p>
-
 <input [(ngModel)]="_movieTitles.movie" #input>
 <button (click)="movieEntry()" class="btn btn-link">enter</button>
-
 
 <ul>
     <li *ngFor="let movieTitle of serviceArr">Movie Name: {{movieTitle}}
