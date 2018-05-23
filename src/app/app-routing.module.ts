@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
 export class AppRoutingModule { }
 
 export const router: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'navigation' , component: NavigationComponent },
     { path: 'movieTitles', component: MovieTitlesComponent },

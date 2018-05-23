@@ -9,8 +9,10 @@ export class MovieService {
     apiKey: string = '02b6e7af54cece5c840e0819a264f3a5'
     baseUrl: string = 'https://api.themoviedb.org/3/'
     moviePage = "search/movie?api_key="
+    imagePage = "movie/{movie_id}/images?api_key="
     movie: string = ''
     movieTitlesArr: any;
+    results: any;
 
   constructor(private _http: HttpClient) { }
   
@@ -20,8 +22,9 @@ export class MovieService {
   }
     
     movieInformation(){
-        console.log('move api url', this.baseUrl+this.moviePage+this.apiKey)
         return this._http.get(this.baseUrl+this.moviePage+this.apiKey+'&query='+this.movie);
     }
+    
+    
 
 }
