@@ -1,17 +1,18 @@
 <input [(ngModel)]="_movieTitles.movie" #input>
 <button (click)="movieEntry()" class="btn btn-link">enter</button>
+<p *ngFor="let display of results"> {{results.title}} {{results.overview}}</p>
 
-<ul>
-    <li *ngFor="let movieTitle of serviceArr">Movie Name: {{movieTitle}}
-    </li>
-</ul>
-<!--NG FOR THROUGH THE RESULTS-->
-<!--<p *ngFor="let data of arr_name">{{something here}}</p>-->
-<!--<p>{{data.results[0].overview}}</p>-->
-<!--<p>{{data.results[0].overview}}</p>-->
-<!--<p>{{data.results[0].overview}}</p>-->
-<!--<p>{{data.results[0].overview}}</p>-->
-<section class="card">
-    <ul>
-        Movie Title: {{title}} <br> Overview: {{overview}} <br> Rating: {{vote_average}} <br> Release Date: {{release_date}} <br> Movie Image: {{poster_path}} </ul>
-</section>
+<div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <a href="..." class="card clickable">
+            <div class="card-img">
+                <img src="...">
+            </div>
+            <div class="card-block">
+                <p class="card-text">
+                    Movie Title: {{title}} <br> Overview: {{overview}} <br> Rating: {{vote_average}} <br> Release Date: {{release_date}}
+                </p>
+            </div>
+        </a>
+    </div>
+</div>

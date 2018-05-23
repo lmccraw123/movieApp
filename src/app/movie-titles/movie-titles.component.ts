@@ -7,23 +7,21 @@ import{ MovieService } from "../movie.service";
   styleUrls: ['./movie-titles.component.css']
 })
 export class MovieTitlesComponent implements OnInit {
- movieTitles: string = "";
- overview: string = "";
- title: string = "";
- vote_average: any;
- release_date: any;
- data:any;
- resultsFromService:any;//variable for results from service
+  title: string = "";
+  overview: string = "";
+  vote_average: any;
+  release_date: any;
+  data:any;
+  movieTitles: string = "";
+  resultsFromService:any;//variable for results from service
  
- image: string = "https://image.tmdb.org/t/p/w500/"
-
     constructor(private _movieTitles: MovieService ) {
       
     }
 
   ngOnInit() {}
   
-  movieEntry(){
+  movieEntry(movie){
     this._movieTitles.movieInformation().subscribe( data=>{
       console.log('test :', data);
       this.resultsFromService=data;
