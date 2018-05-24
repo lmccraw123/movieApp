@@ -1,1 +1,20 @@
-<h1>Welcome Login User:{{email}}</h1>
+<h1>Here are a list of popular movies</h1>
+<input [(ngModel)]="_popularMovies.movie" style="width:75%" #input>
+<button (click)="displayPopular()" class="btn btn-link">enter</button>
+
+<div>
+    <div class="row">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 " *ngFor="let movie of popularInformation.results">
+            <a href="..." class="card clickable">
+                <div class="card-img">
+                    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" style="width:100%" (click)="displayPopular()" alt="Card image cap" />
+                </div>
+                <div class="card-block">
+                    <h3 class="card-text">
+                        Title: {{movie.title}} <br> Overview: {{movie.overview}} <br> Release Date:{{movie.release_date}} <br> Rating: {{movie.vote_average}}
+                    </h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

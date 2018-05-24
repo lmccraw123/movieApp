@@ -8,6 +8,11 @@
         <a routerLink="register" class="nav-link nav-text">Create an Account</a>
         <a routerLink="login" class="nav-link nav-text">Login</a>
     </div>
+    <form class="search">
+        <label for="search_input">
+            <input id="search_input" (click)="movieEntry()" class="btn btn-link" type="text" placeholder="Quick Search">
+        </label>
+    </form>
     <div class="header-actions">
         <a href="javascript://" class="nav-link nav-icon">
             <clr-icon shape="cog"></clr-icon>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ PopularService } from "../popular.service";
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  data:any;
+  popularInformation:any;
+  
 
-  constructor() { }
+  constructor(private _popularMovies: PopularService) { }
+  
 
   ngOnInit() {
   }
   
-
+displayPopular(movie:string){
+    this._popularMovies.popularInformation().subscribe( data=>{
+      console.log('displayPopular :', data);
+      this.popularInformation = data;
+        })
+}
 }

@@ -9,7 +9,7 @@ import { routes } from './app-routing.module';
 
 import { MovieService } from './movie.service';
 import { UserService } from './user.service';
-import { PopularService} from './movie.service';
+import { PopularService} from './popular.service';
 
 import { AppComponent } from './app.component';
 import { MovieTitlesComponent } from './movie-titles/movie-titles.component';
@@ -34,7 +34,7 @@ import { RegisterComponent } from './register/register.component';
   providers: [ 
     MovieService, 
     UserService,
-    popularService
+    PopularService
     ],
   bootstrap: [AppComponent]
 })
