@@ -1,18 +1,30 @@
-<input [(ngModel)]="_movieTitles.movie" #input>
-<button (click)="movieEntry()" class="btn btn-link">enter</button>
-<p *ngFor="let display of results"> {{results.title}} {{results.overview}}</p>
+<input [(ngModel)]="_movieTitles.movie" style="width:75%" #input>
 
-<div class="row">
-    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <a href="..." class="card clickable">
-            <div class="card-img">
-                <img src="...">
-            </div>
-            <div class="card-block">
-                <p class="card-text">
-                    Movie Title: {{title}} <br> Overview: {{overview}} <br> Rating: {{vote_average}} <br> Release Date: {{release_date}}
-                </p>
-            </div>
-        </a>
+<!--pulls the this.info from the movie entry fuction, displays the information for the movie entered by user-->
+<button (click)="movieEntry()" class="btn btn-link">enter</button>
+<!--<div class="row">-->
+<!--    <div class="col-lg-2" style="background: red">aaaa </div>-->
+<!--    <div class="col-lg-2" style="background: green">bbbb </div>-->
+<!--    <div class="col-lg-4" style="background: yellow">cccc </div>-->
+<!--    <div class="col-lg-1" style="background: blue"> dddd</div>-->
+<!--    <div class="col-lg-1" style="background: purple"> eeee</div>-->
+<!--    <div class="col-lg-2" style="background: black">fffff </div>-->
+<!--</div>-->
+
+<div> {{movie}}
+
+    <div class="row">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 " *ngFor="let movie of movieInformation.results">
+            <a href="..." class="card clickable">
+                <div class="card-img">
+                    <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" style="width:100%" (click)="movieEntry()" alt="Card image cap" />
+                </div>
+                <div class="card-block">
+                    <h3 class="card-text">
+                        Title: {{movie.title}} <br> Overview: {{movie.overview}} <br> Release Date:{{movie.release_date}} <br> Rating: {{movie.vote_average}}
+                    </h3>
+                </div>
+            </a>
+        </div>
     </div>
 </div>

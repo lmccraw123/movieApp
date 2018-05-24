@@ -13,7 +13,6 @@ export class MovieService {
     movieTitlesArr: any;
     results: any;
     
-    popMoviePage: string ='movie/popular?api_key='
 
   constructor(private _http: HttpClient) { }
   
@@ -26,8 +25,5 @@ export class MovieService {
         return this._http.get(this.baseUrl+this.moviePage+this.apiKey+'&query='+this.movie);
     }
     
-    popularMoive(){
-      return.this._http.get(this.baseURL+this.popMoviePage+this.apiKey+'&query='+this.movie);
-    }
 
 }
