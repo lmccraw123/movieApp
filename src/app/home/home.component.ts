@@ -15,10 +15,11 @@ export class HomeComponent implements OnInit {
   
 
   ngOnInit() {
+    this.displayPopular(this.data)
   }
   
 displayPopular(movie:string){
-    this._popularMovies.popularInformation().subscribe( data=>{
+    this._popularMovies.displayPopular().subscribe( data=>{
       console.log('displayPopular :', data);
       this.popularInformation = data;
         })

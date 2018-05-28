@@ -8,6 +8,8 @@ import{ MovieService } from "../movie.service";
 })
 export class MovieTitlesComponent implements OnInit {
   data:any;
+  movieTitles: string = "";
+  resultsFromService:any;//variable for results from service
   movieInformation:any;
  
     constructor(private _movieTitles: MovieService ) {

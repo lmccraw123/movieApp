@@ -1,17 +1,4 @@
-<!--binds data-->
-<input [(ngModel)]="_movieTitles.movie" style="width:75%" #input>
-
-<!--pulls the this.info from the movie entry fuction, displays the information for the movie entered by user-->
-<button (click)="movieEntry()" class="btn btn-link">enter</button>
-<!--<div class="row">-->
-<!--    <div class="col-lg-2" style="background: red">aaaa </div>-->
-<!--    <div class="col-lg-2" style="background: green">bbbb </div>-->
-<!--    <div class="col-lg-4" style="background: yellow">cccc </div>-->
-<!--    <div class="col-lg-1" style="background: blue"> dddd</div>-->
-<!--    <div class="col-lg-1" style="background: purple"> eeee</div>-->
-<!--    <div class="col-lg-2" style="background: black">fffff </div>-->
-<!--</div>-->
-
+<!--search bar-->
 <div>
     <div class="row">
         <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 " *ngFor="let movie of movieInformation.results">
@@ -26,5 +13,47 @@
                 </div>
             </a>
         </div>
+    </div>
+</div>
+
+<div class="main-container">
+    <div class="content-container">
+        <div class="content-area">
+            <h3>Enter Movie Title Below</h3>
+            <div>
+                <input [(ngModel)]="_movieTitles.movie" style="width:50%" #input>
+                <button (click)="movieEntry()" class="btn btn-link">enter</button>
+            </div>
+        </div>
+        <nav class="sidenav">
+            <section class="sidenav-content">
+                <a href="bbbb" class="nav-link active">
+                    Nav Element 1
+                </a>
+                <a href="cccc" class="nav-link">
+                    Nav Element 2
+                </a>
+                <section class="nav-group collapsible">
+                    <input id="tabexample1" type="checkbox">
+                    <label for="tabexample1">Collapsible Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                    </ul>
+                </section>
+                <section class="nav-group">
+                    <input id="tabexample2" type="checkbox">
+                    <label for="tabexample2">Default Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                        <li><a class="nav-link active">Link 3</a></li>
+                        <li><a class="nav-link">Link 4</a></li>
+                        <li><a class="nav-link">Link 5</a></li>
+                        <li><a class="nav-link">Link 6</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
     </div>
 </div>

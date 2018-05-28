@@ -9,8 +9,7 @@
 <div class="login-wrapper">
     <form class="login">
         <label class="title">
-            <h3 class="welcome">Welcome to</h3>
-            Login
+            <h3 class="welcome">Login Below</h3>
         </label>
         <div class="login-group">
             <input type="text" id="login_username" placeholder="Email" name="email" [(ngModel)]="user.email">
@@ -21,11 +20,7 @@
                     Remember me
                 </label>
             </div>
-            <div class="error active">
-                Invalid user name or password
-            </div>
             <button type="submit" class="btn btn-primary" (click)="loginSubmit()">NEXT</button>
-            <a href="javascript://" class="signup">Sign up for a Company ID</a>
         </div>
     </form>
 </div>

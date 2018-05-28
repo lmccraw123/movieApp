@@ -18,8 +18,8 @@ export class LoginComponent implements OnInit {
 loginSubmit(){
   console.log(this.user)
   this._user.login(this.user)
-      .subscribe( res:any => {
-          console.log(res)
+      .subscribe( res => {
+          console.log(res,any)
           sessionStorage.setItem('token', res.token);
           sessionStorage.setItem('userId', res.userId);
           this._router.navigate(['home']);
